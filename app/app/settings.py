@@ -23,17 +23,6 @@ if os.environ.has_key('OPENSHIFT_POSTGRESQL_DB_HOST'):
             'PORT': os.environ.get('OPENSHIFT_POSTGRESQL_DB_PORT'),
         }
     }
-elif os.environ.has_key('OPENSHIFT_MYSQL_DB_HOST'):
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': os.environ.get('OPENSHIFT_APP_NAME'),
-            'USER': os.environ.get('OPENSHIFT_MYSQL_DB_USERNAME'),
-            'PASSWORD': os.environ.get('OPENSHIFT_MYSQL_DB_PASSWORD'),
-            'HOST': os.environ.get('OPENSHIFT_MYSQL_DB_HOST'),
-            'PORT': os.environ.get('OPENSHIFT_MYSQL_DB_PORT'),
-        }
-    }
 else:
     DATABASES = {
         'default': {

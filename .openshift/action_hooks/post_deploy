@@ -3,4 +3,4 @@
 # is deployed and started.  This script gets executed directly, so 
 # it could be python, php, ruby, etc.
 python manage.py runworker -v2 &
-daphne myapp.asgi:channel_layer -p 8443 -b $OPENSHIFT_DIY_IP -v2 &
+daphne myapp.asgi:channel_layer -p 8000 -b $OPENSHIFT_DIY_IP -v2 &
